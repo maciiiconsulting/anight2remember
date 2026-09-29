@@ -39,21 +39,22 @@
   .narrow{max-width:720px;margin:0 auto}
 
   /* ---------- hero ---------- */
-  .hero{background:var(--navy);padding:0 0 52px}
+  .hero{background:var(--navy);padding:0 0 36px}
   .hero .banner{width:100%;height:auto;display:block}
   .hero .feature{text-align:center;font-size:12.5px;letter-spacing:.22em;
-        color:var(--gold);text-transform:uppercase;margin:0 0 16px}
-  .meta{text-align:center;margin-top:34px}
+        color:var(--gold);text-transform:uppercase;margin:0 0 12px}
+  .meta{text-align:center;margin-top:22px}
+  .meta p{margin-bottom:0}
   .meta .d{font-family:var(--serif);font-size:27px;color:var(--cream);letter-spacing:.01em;line-height:1.3}
-  .meta .v{font-size:14.5px;letter-spacing:.14em;color:var(--gold);text-transform:uppercase;margin-top:9px}
+  .meta .v{font-size:14.5px;letter-spacing:.14em;color:var(--gold);text-transform:uppercase;margin-top:8px}
   .meta .w{font-size:13.5px;color:rgba(242,235,220,.66);margin-top:6px}
-  .cta{display:inline-block;margin-top:26px;background:var(--gold);color:var(--navy);
+  .cta{display:inline-block;margin-top:20px;background:var(--gold);color:var(--navy);
        font-weight:600;font-size:15px;letter-spacing:.11em;text-transform:uppercase;
        padding:15px 40px;border-radius:2px;text-decoration:none;transition:.2s}
   .cta:hover{background:#E4C155}
 
   /* ---------- sections ---------- */
-  section{padding:64px 0}
+  section{padding:52px 0}
   .rule{width:56px;height:1px;background:var(--gold);margin:0 auto 26px}
   h2{font-family:var(--serif);font-size:32px;font-weight:600;color:var(--cream);
       text-align:center;margin:0 0 8px;letter-spacing:.01em}
@@ -62,14 +63,34 @@
   p{margin:0 0 18px}
   .lede{font-size:18px;line-height:1.72}
 
-  .about{background:var(--navy-deep)}
+  .about{background:var(--navy-deep);text-align:center}
   .about p:last-child{margin-bottom:0}
   .hash{color:var(--red);letter-spacing:.3em;font-weight:500;font-size:15px}
+  .halves{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:860px;margin:28px auto 0;text-align:left}
+  .half{background:var(--navy);border-radius:4px;padding:24px 22px}
+  .htime{font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0 0 6px}
+  .hname{font-family:var(--serif);font-size:24px;color:var(--cream);margin:0 0 10px}
+  .hbody{font-size:15.5px;line-height:1.66;color:rgba(242,235,220,.84);margin:0}
+  .practical{font-size:14.5px;color:rgba(242,235,220,.72);margin:26px 0 0}
+
+  /* ---------- story ---------- */
+  .story{background:var(--navy);text-align:center}
+  .story .lede{font-size:18px;color:rgba(242,235,220,.9);max-width:640px;margin-left:auto;margin-right:auto}
+  .sig{font-size:14.5px;color:var(--cream);margin:24px 0 0;letter-spacing:.06em}
+  .sig span{display:block;font-size:11.5px;color:rgba(242,235,220,.6);
+      letter-spacing:.16em;text-transform:uppercase;margin-top:5px}
 
   /* ---------- tickets ---------- */
   .tickets{background:var(--navy)}
-  .widget-shell{max-width:760px;margin:30px auto 0;background:var(--navy-deep);
-      border:1px solid rgba(212,175,55,.2);border-radius:4px;padding:10px}
+  .eventline{text-align:center;font-size:14.5px;color:rgba(242,235,220,.72);max-width:660px;margin:0 auto}
+  .tiers{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:760px;margin:26px auto 0}
+  .tier{background:var(--navy-deep);border-radius:4px;padding:24px 22px;text-align:left}
+  .tname{font-family:var(--serif);font-size:23px;color:var(--cream);margin:0 0 4px}
+  .tprice{font-size:22px;color:var(--gold);font-weight:500;margin:0 0 10px}
+  .tprice span{font-size:12.5px;color:rgba(242,235,220,.6);letter-spacing:.1em;
+      text-transform:uppercase;margin-left:7px;font-weight:400}
+  .tincl{font-size:15px;line-height:1.6;color:rgba(242,235,220,.8);margin:0}
+  .widget-shell{max-width:760px;margin:22px auto 0}
   .tt-widget{min-height:200px}
   .tt-widget-fallback a{color:var(--gold)}
 
@@ -84,11 +105,22 @@
   .incl b{color:var(--cream);font-weight:500}
   .legacy-lede{text-align:center;font-size:17.5px;color:rgba(242,235,220,.86);max-width:560px;margin:0 auto}
 
-  /* ---------- purpose ---------- */
-  .purpose{background:var(--navy);text-align:center}
-  .purpose .script{font-family:var(--serif);font-style:italic;font-size:34px;color:var(--gold);margin-bottom:14px}
-  .floor{font-size:19px;color:var(--cream);max-width:620px;margin:0 auto 10px}
+  /* ---------- purpose and beneficiaries ---------- */
+  .purpose{background:var(--navy-deep);text-align:center}
+  .purpose .script{font-family:var(--serif);font-style:italic;font-size:34px;color:var(--gold);margin-bottom:10px}
+  .floor{font-size:19px;color:var(--cream);max-width:660px;margin:0 auto}
   .floor b{color:var(--gold);font-weight:600}
+  .bgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:860px;margin:30px auto 0}
+  .bcard{background:var(--navy);border-radius:4px;padding:26px 24px;
+      display:flex;flex-direction:column;align-items:center}
+  .blogo{display:flex;align-items:center;justify-content:center;min-height:124px;margin-bottom:16px}
+  .blogo img{max-height:124px;width:auto}
+  .blogo.plaque{background:var(--cream);border-radius:4px;padding:12px 16px}
+  .blogo.plaque img{max-height:100px}
+  .bmission{font-size:15px;line-height:1.66;color:rgba(242,235,220,.82);margin:0 0 16px}
+  .blink{color:var(--gold);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;
+      text-decoration:none;font-weight:500;margin-top:auto}
+  .blink:hover{text-decoration:underline}
 
   /* ---------- partners ---------- */
   .partners{background:var(--navy-deep)}
@@ -137,9 +169,12 @@
   @media (max-width:640px){
     body{font-size:16px}
     .wrap{padding:0 20px}
-    section{padding:48px 0}
+    section{padding:38px 0}
     h2{font-size:27px}
     .meta .d{font-size:22px}
+    .bgrid{grid-template-columns:1fr;gap:16px}
+    .tiers{grid-template-columns:1fr;gap:16px;margin-top:22px}
+    .halves{grid-template-columns:1fr;gap:16px;margin-top:22px}
     .lockup{max-width:300px}
     .pair{grid-template-columns:1fr;gap:26px}
     .plogos{gap:26px}
@@ -147,46 +182,88 @@
     .plogos img.tall{height:84px}
     .plogos img.wide{height:42px}
     .purpose .script{font-size:27px}
-    .hero{padding:0 0 40px}
-    .meta{margin-top:26px}
+    .hero{padding:0 0 26px}
+    .meta{margin-top:18px}
   }
 </style>
 </head>
 <body>
 
 <header class="hero">
+  <!-- PASS 2 SLOT: hero image. This banner is the placeholder. It gets replaced with a still
+       from the 9/25 walkthrough. Swap assets/banner.jpg (desktop) and assets/social.jpg (mobile). -->
   <picture>
     <source media="(min-width:781px)" srcset="assets/banner.jpg">
     <img class="banner" src="assets/social.jpg" fetchpriority="high" alt="A Night 2 Remember: Los Angeles. Monday, October 26, 2026, 7:30 PM to midnight, The Club Lagos, Downtown LA.">
   </picture>
   <div class="wrap">
     <div class="meta">
-      <p class="feature">Karaoke &middot; Live Music &middot; DJs</p>
+      <p class="feature">Networking &middot; Karaoke &middot; Live Music &middot; DJs</p>
       <p class="d">Monday, October 26, 2026 &middot; 7:30 PM to Midnight</p>
       <p class="v">The Club Lagos &middot; 330 S Broadway, Downtown Los Angeles</p>
-      <p class="w">NMSDC National Conference Week</p>
+      <p class="w">NMSDC National Conference Week &middot; 21+</p>
       <a class="cta" href="#tickets">Get Tickets</a>
     </div>
   </div>
 </header>
 
 <section class="about">
-  <div class="wrap narrow">
+  <div class="wrap">
     <p class="kicker">The Night</p>
+    <h2>One Evening, Two Halves</h2>
     <div class="rule"></div>
-    <p class="lede">A Night 2 Remember brings a karaoke competition to Downtown Los Angeles. Pre-registered singers and live volunteers take the mic, the crowd votes, and the winner takes a bottle. Live music and DJ sets from DJ Lefty run through the night.</p>
-    <p class="lede">Monday, October 26, 2026, during NMSDC National Conference Week, at The Club Lagos in Downtown Los Angeles.</p>
-    <p class="lede">Attire is black tie optional. 21 and over.</p>
-    <p class="lede">Register to sing at no cost and you are in the lineup when you arrive.</p>
-    <p class="hash">#AN2RLA</p>
+    <p class="lede narrow">Monday, October 26, 2026, during NMSDC National Conference Week, at The Club Lagos in Downtown Los Angeles. Come for the first half, stay for the second, or take the whole night.</p>
+    <div class="halves">
+      <div class="half">
+        <p class="htime">7:30 to 9:30</p>
+        <p class="hname">The Room</p>
+        <p class="hbody">Doors at 7:30 with light food. An intimate room of corporate leaders, certified MBEs and creators, with introductions made rather than left to chance. At 8:30 we tell you why this night exists, raise a champagne toast together, and close the half with a live performance.</p>
+      </div>
+      <div class="half">
+        <p class="htime">9:30 to Midnight</p>
+        <p class="hname">The Party</p>
+        <p class="hbody">The lights come down and DJ Lefty takes over. The karaoke competition runs in rounds between his sets. Pre-registered singers and live volunteers take the mic, the crowd votes, and the winner takes a special prize before the night closes. Register to sing at no cost and you are in the lineup when you arrive.</p>
+      </div>
+    </div>
+    <p class="practical">LA Chic / Cocktail Attire &middot; 21 and over &middot; <span class="hash">#AN2RLA</span></p>
+  </div>
+</section>
+
+<section class="story">
+  <div class="wrap narrow">
+    <p class="kicker">Why This Night</p>
+    <div class="rule"></div>
+    <p class="lede">In January I lost my father. It was my third significant loss in five years, and it showed me I was not the only one carrying something like it. So I started Reel Brothers Foundation, to walk with people through grief.</p>
+    <p class="lede">My Friend&rsquo;s House has been feeding and clothing people in Downtown Los Angeles for years, in the same neighborhood we are gathering in.</p>
+    <p class="lede">This night is how we fund both, and it is how we celebrate. Come have fun, make a memory, and have a night to remember.</p>
+    <p class="sig">Michael A. Cummings III<span>Founder and Board President, Reel Brothers Foundation</span></p>
   </div>
 </section>
 
 <section class="purpose">
-  <div class="wrap narrow">
+  <div class="wrap">
     <p class="script">A Party for a Purpose</p>
+    <h2>Who This Night Supports</h2>
     <div class="rule"></div>
-    <p class="floor"><b>$5 from every ticket</b> goes to Reel Brothers Foundation and My Friend&rsquo;s House Foundation.</p>
+    <p class="floor"><b>$10 from every ticket</b> goes to the two foundations, $5 each: Reel Brothers Foundation and My Friend&rsquo;s House.</p>
+    <div class="bgrid">
+      <div class="bcard">
+        <a class="blogo" href="https://reelbrothersfoundation.org" target="_blank" rel="noopener">
+          <img src="assets/rbf-lockup-white.svg" width="855" height="910" loading="lazy"
+               alt="Reel Brothers Foundation: the name beside a silhouette of a man fishing">
+        </a>
+        <p class="bmission">The Reel Brothers Foundation is a faith based private operating foundation that provides programming and resources to people navigating grief related to the loss of a significant loved one, with a particular focus on young adults.</p>
+        <a class="blink" href="https://reelbrothersfoundation.org" target="_blank" rel="noopener">reelbrothersfoundation.org</a>
+      </div>
+      <div class="bcard">
+        <a class="blogo plaque" href="https://www.myfriendshousela.org" target="_blank" rel="noopener">
+          <img src="assets/my-friends-house.png" width="212" height="215" loading="lazy"
+               alt="My Friend&rsquo;s House Foundation: We Feed The Hungry">
+        </a>
+        <p class="bmission">Empowering individuals and families facing food insecurity and homelessness to achieve self-sufficiency through essential resources, compassionate support, and transformative programs.</p>
+        <a class="blink" href="https://www.myfriendshousela.org" target="_blank" rel="noopener">myfriendshousela.org</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -195,6 +272,19 @@
     <p class="kicker">Tickets</p>
     <h2>Join Us</h2>
     <div class="rule"></div>
+    <p class="eventline">Monday, October 26, 7:30 PM to midnight &middot; The Club Lagos, 330 S Broadway, Los Angeles &middot; 21+</p>
+    <div class="tiers">
+      <div class="tier">
+        <p class="tname">General Admission</p>
+        <p class="tprice">$30 <span>plus fees</span></p>
+        <p class="tincl">Entry to both rooms and the full run of show. Karaoke competition, live music and DJ sets through the night. Cash bar.</p>
+      </div>
+      <div class="tier">
+        <p class="tname">Legacy</p>
+        <p class="tprice">$50 <span>plus fees</span></p>
+        <p class="tincl">Everything in General Admission, plus a branded flute, the event T-shirt and entry to the champagne toast.</p>
+      </div>
+    </div>
     <div class="widget-shell">
       <!-- Ticket Tailor Widget. Paste this into your website where you want the widget to appear. Do not change the code or the widget may not work properly. -->
 <div class="tt-widget"><div class="tt-widget-fallback"><p><a href="https://tickets.anight2remember.com/all-tickets/employeeengagementconsultinggroupllc/?ref=website_widget&amp;show_search_filter=true&amp;show_date_filter=true&amp;show_sort=true" target="_blank">Click here to buy tickets</a><br /><small><a href="https://www.tickettailor.com?rf=wdg_342396" class="tt-widget-powered">Sell tickets online with Ticket Tailor</a></small></p></div><script src="https://cdn.tickettailor.com/js/widgets/min/widget.js" data-url="https://tickets.anight2remember.com/all-tickets/employeeengagementconsultinggroupllc/?ref=website_widget&amp;show_search_filter=true&amp;show_date_filter=true&amp;show_sort=true" data-type="inline" data-inline-minimal="true" data-inline-show-logo="false" data-inline-bg-fill="true" data-inline-inherit-ref-from-url-param="" data-inline-ref="website_widget"></script></div>
@@ -205,7 +295,7 @@
 
 <section class="legacy">
   <div class="wrap">
-    <p class="kicker">Upgrade &middot; $50</p>
+    <p class="kicker">$50, Plus Fees</p>
     <h2>The Legacy Ticket</h2>
     <div class="rule"></div>
     <p class="legacy-lede">Everything in General Admission, plus two things you take home with you.</p>
@@ -242,10 +332,6 @@
       </div>
       <p class="pnames" style="margin-top:14px">DJ Lefty</p>
     </div>
-    <div class="prow">
-      <p class="plabel">Proceeds Benefit</p>
-      <p class="pnames">Reel Brothers Foundation <span>&middot;</span> My Friend&rsquo;s House Foundation</p>
-    </div>
     <!-- SPONSORS: remove these comment lines when the first sponsor closes.
          Put each logo in assets/ and add one img line per sponsor.
     <div class="prow">
@@ -263,7 +349,7 @@
     <p class="kicker">Partnership</p>
     <h2>Sponsor the Night</h2>
     <div class="rule"></div>
-    <p>Sponsorship opportunities are available at several levels, with placement across the room, the screens and the stage. Proceeds benefit two foundations.</p>
+    <p>Sponsorship opportunities are available at several levels, with placement across the room, the screens and the stage.</p>
     <a class="ghost" href="mailto:info@theeecg.com?subject=AN2R%20LA%20Sponsorship%20Inquiry">Request the Sponsor Packet</a>
   </div>
 </section>
@@ -275,8 +361,9 @@
     <img class="mark" src="assets/club-lagos.png" width="419" height="420" loading="lazy" decoding="async" alt="The Club Lagos">
     <p class="name">The Club Lagos</p>
     <p class="addr">330 S Broadway<br>Los Angeles, CA 90013</p>
-    <!-- VENUE PHOTOS: to swap, replace venue1.jpg to venue4.jpg in assets/ using the same file names.
-         Any size works, the grid crops each one to a square. -->
+    <!-- PASS 2 SLOT: venue photo strip. These four are the venue's own promotional shots and are
+         the placeholder. Replace venue1.jpg to venue4.jpg in assets/ with the 9/25 walkthrough
+         stills, using the same file names. Any size works, the grid crops each one to a square. -->
     <div class="grid4">
       <img src="assets/venue1.jpg" width="620" height="620" loading="lazy" decoding="async" alt="The Club Lagos main room">
       <img src="assets/venue2.jpg" width="620" height="620" loading="lazy" decoding="async" alt="The Club Lagos lounge seating">
@@ -309,7 +396,8 @@
     <p class="fine">
       Produced by Employee Engagement Consulting Group, LLC<br>
       with Insights Marketing and Promotions<br>
-      Benefiting Reel Brothers Foundation and My Friend&rsquo;s House Foundation
+      Benefiting <a href="https://reelbrothersfoundation.org" target="_blank" rel="noopener">Reel Brothers Foundation</a>
+      and <a href="https://www.myfriendshousela.org" target="_blank" rel="noopener">My Friend&rsquo;s House Foundation</a>
     </p>
   </div>
 </footer>
