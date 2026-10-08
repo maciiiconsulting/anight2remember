@@ -213,10 +213,45 @@
   }
   .earlyline{margin:14px 0 0;text-align:center;font-size:16.5px;color:var(--cream)}
   .earlyline b{color:var(--gold);font-weight:600;letter-spacing:.04em}
-  .tickets{background:var(--navy)} .night{background:var(--navy-deep)}
+  .tickets{background:var(--navy)} .tier{background:var(--navy-deep)}
   .partners{background:var(--navy-deep)} .details{background:var(--navy)}
   .support-end{background:var(--navy-deep);padding:26px 0 30px}
   .support-end .cantmake{margin-top:0}
+  /* 10/8 story order: the why reads as one story in four steps, the night sits above tickets */
+  .herogoal{text-align:center;font-size:16px;line-height:1.5;color:rgba(242,235,220,.92);margin:-6px 0 14px}
+  .why .whyline{font-family:var(--serif);font-style:italic;font-size:23px;line-height:1.45;color:var(--cream);margin:0 0 22px}
+  .step{font-family:var(--serif);font-size:24px;font-weight:600;color:var(--gold);margin:26px 0 8px;line-height:1.2}
+  .arch{position:relative;display:grid;grid-template-columns:repeat(3,1fr);max-width:440px;margin:44px auto 10px;text-align:center}
+  .arch .arc{position:absolute;left:0;top:-4px;width:100%;height:74px}
+  .apt{position:relative;display:flex;flex-direction:column;align-items:center;gap:9px}
+  .apt.mid{transform:translateY(-34px)}
+  .ring{display:flex;align-items:center;justify-content:center;width:74px;height:74px;border-radius:50%;
+      border:1.5px solid var(--gold);background:var(--navy-deep);box-shadow:0 0 18px rgba(212,175,55,.38),inset 0 0 10px rgba(212,175,55,.14)}
+  .ring svg{width:32px;height:32px;fill:none;stroke:var(--gold);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+  .alabel{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500}
+  .crc{list-style:none;margin:0 0 6px;padding:0}
+  .crc li{display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid rgba(242,235,220,.1);color:rgba(242,235,220,.9)}
+  .crc svg{flex:0 0 26px;width:26px;height:26px;margin-top:3px;fill:none;stroke:var(--gold);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+  .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .beat{margin:40px 0 6px}
+  .who .beat{margin-top:0}
+  /* the two parts read as the last step of The What: same background, same column, no new chapter heading */
+  .night{background:var(--navy-deep);padding-top:26px;padding-bottom:12px}
+  .night .beat{margin-top:0}
+  .night .wrap{max-width:744px}
+  .night .step{margin-top:0}
+  .night .part{background:var(--navy)}
+  .why{padding-bottom:6px} .why.who{padding-top:26px;padding-bottom:30px}
+  .who details.more{margin-bottom:0}
+  .beat{margin-top:30px}
+  .arch{margin-top:40px}
+  .why .fgrid{margin-top:18px}
+  .why .fcard{background:var(--navy)}
+  .why .sig{margin-top:4px}
+  @media (max-width:700px){
+    .why .whyline{font-size:20.5px}
+    .step{font-size:22px;margin-top:22px}
+  }
 </style>
 </head>
 <body>
@@ -233,7 +268,7 @@
   <div class="wrap narrow">
     <h1>A Night 2 Remember</h1>
     <p class="tagline">Sip, Sing &amp; Celebrate with a Purpose</p>
-    <p class="whyline">After losing someone you love, you learn you are not the only one navigating grief. This night is for the people we can&rsquo;t forget, the songs that got us through, and the stories we don&rsquo;t tell enough. The night helps build Reel Brothers Foundation.</p>
+    <p class="herogoal">The night helps build Reel Brothers Foundation and its first programs. Our goal for the night: $10,000.</p>
     <p class="when">Monday, October 26 &middot; Doors 8 PM to Midnight<br>The Club Lagos, DTLA</p>
     <div class="herobtns">
       <a class="cta" href="#tickets">Get Tickets</a>
@@ -245,25 +280,109 @@
 </header>
 
 <!-- ============ 2. THE WHY ============ -->
-<section class="why">
+<!-- 10/8 story order: why the foundation exists, the night created for it, Connect Remember Celebrate,
+     what the money launches. Built from the 10/6 founder's note and full story. -->
+<section class="why" id="why">
   <div class="wrap narrow">
     <p class="kicker">A Note from the Founder</p>
+    <h2>The Why</h2>
     <div class="rule"></div>
+    <p class="whyline">After losing someone you love, you learn you are not the only one navigating grief. This night is for the people we can&rsquo;t forget, the songs that got us through, and the stories we don&rsquo;t tell enough.</p>
     <!-- PASS 2 SLOT: founder photo, AN2R-founder-dad.jpg, lightly restored. -->
     <figure class="founder">
       <img src="assets/founder-dad.jpg" width="1200" height="871" loading="lazy" decoding="async"
            alt="Michael as a boy, dancing with his father in a parking lot">
       <figcaption>My dad and me, 2001.</figcaption>
     </figure>
-    <p>In January I lost my father. It was my third significant loss in five years, and it showed me I was not the only one carrying something like it. I started Reel Brothers Foundation to walk with people through grief. A Night 2 Remember is the first event built around that work.</p>
-    <p class="sig">Michael A. Cummings III, Founder.</p>
+
+    <h3 class="step">Why Reel Brothers Foundation exists</h3>
+    <p>In January I lost my father, Michael A. Cummings II. It was my third profound loss in five years. In the midst of my own grief, I began to see how many others were quietly carrying theirs.</p>
+    <p>Reel Brothers was his idea before it was mine. It came to him after we lost our cousin, who was also his fishing partner, and he never got to build it. I wrote it down in March and built it, to walk alongside people through loss and remind them they don&rsquo;t have to face it alone. Grief does not end when the funeral does. The foundation exists for the months after, when everyone else has gone back to normal and you are learning a new one.</p>
+
+    <h2 class="beat">The What</h2>
+    <div class="rule"></div>
+    <h3 class="step">A night created for it</h3>
+    <p>A Night 2 Remember was created to help build that work. It is meant to feel like a celebration, because that is what the people we lost would have wanted.</p>
+
+    <h3 class="step">Connect, Remember, Celebrate</h3>
+    <div class="arch" aria-hidden="true">
+      <svg class="arc" viewBox="0 0 300 70" preserveAspectRatio="none"><path d="M40 68 Q150 -22 260 68" fill="none" stroke="#D4AF37" stroke-width="1" stroke-dasharray="2 5" opacity=".55"/></svg>
+      <div class="apt">
+        <span class="ring"><svg viewBox="0 0 24 24"><circle cx="9" cy="12" r="5.5"/><circle cx="15" cy="12" r="5.5"/></svg></span>
+        <span class="alabel">Connect</span>
+      </div>
+      <div class="apt mid">
+        <span class="ring"><svg viewBox="0 0 24 24"><path d="M12 2.5c2 2.8 3.4 4.4 3.4 6.4a3.4 3.4 0 0 1-6.8 0c0-2 1.4-3.6 3.4-6.4z"/><rect x="9" y="14" width="6" height="7.5" rx="1"/><path d="M12 12.3V14"/></svg></span>
+        <span class="alabel">Remember</span>
+      </div>
+      <div class="apt">
+        <span class="ring"><svg viewBox="0 0 24 24"><rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4M9 21h6"/></svg></span>
+        <span class="alabel">Celebrate</span>
+      </div>
+    </div>
+    <ul class="crc">
+      <li><svg viewBox="0 0 24 24"><circle cx="9" cy="12" r="5.5"/><circle cx="15" cy="12" r="5.5"/></svg><span><b class="vh">Connect.</b> A guided hour of real conversation.</span></li>
+      <li><svg viewBox="0 0 24 24"><path d="M12 2.5c2 2.8 3.4 4.4 3.4 6.4a3.4 3.4 0 0 1-6.8 0c0-2 1.4-3.6 3.4-6.4z"/><rect x="9" y="14" width="6" height="7.5" rx="1"/><path d="M12 12.3V14"/></svg><span><b class="vh">Remember.</b> The people we can&rsquo;t forget, and the stories we don&rsquo;t tell enough.</span></li>
+      <li><svg viewBox="0 0 24 24"><rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4M9 21h6"/></svg><span><b class="vh">Celebrate.</b> The songs that got us through. Sing one for someone, or cheer on the people who do.</span></li>
+    </ul>
+
+  </div>
+</section>
+
+<!-- ============ 3. THE NIGHT IN TWO PARTS ============ -->
+<section class="night">
+  <div class="wrap">
+    <h2 class="beat">The How</h2>
+    <div class="rule"></div>
+    <h3 class="step">Two Parts, One Room</h3>
+    <p>It all happens in one room at The Club Lagos. Come for one part, or stay for both.</p>
+    <div class="parts">
+      <div class="part">
+        <img src="assets/venue-room.jpg" width="1400" height="788" loading="lazy" decoding="async"
+             alt="The Club Lagos: the room, seating along both sides and the stage at the end">
+        <div class="pin">
+          <p class="ptime">8:00 to 9:30 &middot; Connect</p>
+          <p class="pname">Cocktail Hour + Guided Networking</p>
+          <p class="pbody">A welcome drink comes with every ticket and music while the room fills. At 8:30 a host takes the room through a guided hour. Not mingling: real conversation about where people are going next and what they need to get there. You leave knowing someone&rsquo;s story, and with one thing you can actually do for them.</p>
+        </div>
+      </div>
+      <div class="part">
+        <img src="assets/venue-stage.jpg" width="1400" height="788" loading="lazy" decoding="async"
+             alt="The Club Lagos: the stage and the LED wall carrying the A Night 2 Remember artwork">
+        <div class="pin">
+          <p class="ptime">9:30 to Midnight &middot; Remember and Celebrate</p>
+          <p class="pname">DJ + Karaoke Competition</p>
+          <p class="pbody">The story, then the champagne toast, then the mic opens. DJ Lefty runs the night and the karaoke competition runs in rounds between his sets, with the crowd voting. Sing one for someone.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE WHO AND THE GOAL ============ -->
+<section class="why who">
+  <div class="wrap narrow">
+    <!-- 10/8: the foundation card, moved up from its own section -->
+    <h2 class="beat">The Who</h2>
+    <div class="rule"></div>
+    <p class="center">A Night 2 Remember helps build Reel Brothers Foundation. It is not a program of the foundation.</p>
+    <div class="fgrid">
+      <div class="fcard">
+        <a class="flogo" href="https://reelbrothersfoundation.org" target="_blank" rel="noopener">
+          <img src="assets/rbf-lockup-white.svg" width="855" height="910" loading="lazy"
+               alt="Reel Brothers Foundation">
+        </a>
+        <p class="fline">Programming and resources for people navigating grief after losing someone significant, with a particular focus on young adults.</p>
+        <a class="flink" href="https://reelbrothersfoundation.org" target="_blank" rel="noopener">reelbrothersfoundation.org</a>
+      </div>
+    </div>
+
+    <h3 class="step">What the night launches</h3>
     <p class="floor">The night helps build Reel Brothers Foundation and its first programs. <b>Our goal for the night: $10,000.</b></p>
+    <p class="sig">Michael A. Cummings III, Founder.</p>
     <details class="more">
       <summary>Read more</summary>
       <div class="inner">
-        <h3>The full story</h3>
-        <p>My father, Michael A. Cummings II, passed in January 2026. Reel Brothers was his idea before it was mine. It came to him after we lost our cousin, who was also his fishing partner, and he never got to build it. I wrote it down in March and built it.</p>
-        <p>Grief does not end when the funeral does. The foundation exists for the months after, when everyone else has gone back to normal and you are learning a new one. A Night 2 Remember is the first event we are throwing, and it is meant to feel like a celebration, because that is what the people we lost would have wanted.</p>
         <h3>Where the money goes</h3>
         <p><b>Reel Brothers Foundation</b> is a faith based private operating foundation that provides programming and resources to people navigating grief related to the loss of a significant loved one, with a particular focus on young adults. It works nationally.</p>
         <p>The night helps build Reel Brothers Foundation and its first programs. Our goal for the night: $10,000.</p>
@@ -310,56 +429,6 @@
       <!-- Ticket Tailor Widget. Paste this into your website where you want the widget to appear. Do not change the code or the widget may not work properly. -->
 <div class="tt-widget"><div class="tt-widget-fallback"><p><a href="https://tickets.anight2remember.com/all-tickets/employeeengagementconsultinggroupllc/?ref=website_widget&amp;show_search_filter=true&amp;show_date_filter=true&amp;show_sort=true" target="_blank">Click here to buy tickets</a></p></div><script src="https://cdn.tickettailor.com/js/widgets/min/widget.js" data-url="https://tickets.anight2remember.com/all-tickets/employeeengagementconsultinggroupllc/?ref=website_widget&amp;show_search_filter=true&amp;show_date_filter=true&amp;show_sort=true" data-type="inline" data-inline-minimal="true" data-inline-show-logo="false" data-inline-bg-fill="true" data-inline-inherit-ref-from-url-param="" data-inline-ref="website_widget"></script></div>
 <!-- End of Ticket Tailor Widget -->
-    </div>
-  </div>
-</section>
-
-<!-- ============ 3. THE NIGHT IN TWO PARTS ============ -->
-<section class="night">
-  <div class="wrap">
-    <p class="kicker">The Night</p>
-    <h2>Two Parts, One Room</h2>
-    <div class="rule"></div>
-    <p class="narrow center">It all happens in one room at The Club Lagos. Come for one part, or stay for both.</p>
-    <div class="parts">
-      <div class="part">
-        <img src="assets/venue-room.jpg" width="1400" height="788" loading="lazy" decoding="async"
-             alt="The Club Lagos: the room, seating along both sides and the stage at the end">
-        <div class="pin">
-          <p class="ptime">8:00 to 9:30</p>
-          <p class="pname">Cocktail Hour + Guided Networking</p>
-          <p class="pbody">A welcome drink comes with every ticket and music while the room fills. At 8:30 a host takes the room through a guided hour. Not mingling: real conversation about where people are going next and what they need to get there. You leave knowing someone&rsquo;s story, and with one thing you can actually do for them.</p>
-        </div>
-      </div>
-      <div class="part">
-        <img src="assets/venue-stage.jpg" width="1400" height="788" loading="lazy" decoding="async"
-             alt="The Club Lagos: the stage and the LED wall carrying the A Night 2 Remember artwork">
-        <div class="pin">
-          <p class="ptime">9:30 to Midnight</p>
-          <p class="pname">DJ + Karaoke Competition</p>
-          <p class="pbody">The story, then the champagne toast, then the mic opens. DJ Lefty runs the night and the karaoke competition runs in rounds between his sets, with the crowd voting. Sing one for someone.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 5. THE FOUNDATION ============ -->
-<section class="foundations">
-  <div class="wrap">
-    <p class="kicker">Who This Night Supports</p>
-    <h2>Reel Brothers Foundation</h2>
-    <div class="rule"></div>
-    <p class="narrow center">A Night 2 Remember helps build Reel Brothers Foundation. It is not a program of the foundation.</p>
-    <div class="fgrid">
-      <div class="fcard">
-        <a class="flogo" href="https://reelbrothersfoundation.org" target="_blank" rel="noopener">
-          <img src="assets/rbf-lockup-white.svg" width="855" height="910" loading="lazy"
-               alt="Reel Brothers Foundation">
-        </a>
-        <p class="fline">Programming and resources for people navigating grief after losing someone significant, with a particular focus on young adults.</p>
-        <a class="flink" href="https://reelbrothersfoundation.org" target="_blank" rel="noopener">reelbrothersfoundation.org</a>
-      </div>
     </div>
   </div>
 </section>
@@ -422,6 +491,10 @@
         title="Map to The Club Lagos"></iframe>
     </div>
     <div class="faq">
+      <details>
+        <summary>Why should you attend?</summary>
+        <p>This night is for the people we can&rsquo;t forget, the songs that got us through, and the stories we don&rsquo;t tell enough. You get a guided hour of real conversation, a DJ and a karaoke competition, and you leave knowing someone&rsquo;s story. The night helps build Reel Brothers Foundation and its first programs.</p>
+      </details>
       <details>
         <summary>When should you arrive?</summary>
         <p>Doors open at 8:00. The cocktail hour and guided networking run until 9:30, and the DJ and the karaoke competition take the room from 9:30 to midnight.</p>
